@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "sf-pro-bold";
+  src: url(../fonts/SF-Pro-Text-Bold.otf);
+}
+
+@font-face {
+  font-family: "sf-pro";
+  src: url(../fonts/SF-Pro.ttf);
+}
+
+@font-face {
+  font-family: "sf-pro-thin";
+  src: url(../fonts/SF-Pro-Display-Light.otf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(221, 220, 218);
+}
+
+h1 {
+  font-family: "sf-pro", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+h2 {
+  font-family: "sf-pro", sans-serif;
+  color: white;
+}
+
+h3 {
+  font-family: "sf-pro-thin", sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 100;
+  color: white;
+}
+
+/* image */
+.container {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../cities/alejandro-alfaro-m-cmo76qKvNaU-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  height: 100vh;
+}
+
+/* content */
+.container {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+header {
+  margin: 6vh 6vh 6vh 6vh;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* icon */
+.btn-search {
+  width: 6vh;
+  height: 6vh;
+}
+
+.btn-search:hover {
+  cursor: pointer;
+}
+
+/* input */
+.search {
+  margin: auto;
+  margin-left: 0;
+  margin-top: 0;
+  width: 35vh;
+  height: auto;
+  font-family: "sf-pro-thin", sans-serif;
+  font-size: 3vh;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  color: white;
+  padding: 1.5vh;
+  background: transparent;
+  outline: none;
+  border-width: 0.5vh;
+  border-radius: 30px;
+  opacity: 0.9;
+  border: solid white;
+}
+
+.search::placeholder {
+  font-family: "sf-pro", sans-serif;
+  color: white;
+  opacity: 0.6;
+}
+
+.date-time {
+  text-align: right;
+}
+
+.time {
+  font-size: 4.5vh;
+}
+
+.date {
+  font-size: 2.5vh;
+}
+
+@media (max-width: 600px) {
+  .header {
+    margin: 4vh 4vh 4vh 4vh;
+  }
+
+  .search {
+    font-size: 2vh;
+    width: 17vh;
+  }
+
+  .time {
+    font-size: 3.5vh;
+  }
+
+  .date {
+    font-size: 1.8vh;
+  }
+}
