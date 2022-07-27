@@ -61,8 +61,6 @@ export const currentFunction = async function (city) {
   }
 };
 
-currentFunction("caracas");
-
 export const nextFunction = async function (city) {
   try {
     // Getting the next 2 days
@@ -73,16 +71,7 @@ export const nextFunction = async function (city) {
     state.next2 = nextObject(future, 2)
 
     if (!res.ok) throw new Error(`${future.message}`);
-
-    console.log(future)
   } catch (err) {
     console.error(err);
   }
 };
-
-nextFunction("caracas");
-
-setTimeout(() => {
-  console.log(state.next1)
-  console.log(state.next2)
-}, 2000);
