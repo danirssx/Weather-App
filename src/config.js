@@ -7,3 +7,4 @@ export const API_CURRENT = function(city) {
 export const API_NEXT = function(city) {
     return `http://api.weatherapi.com/v1/forecast.json?key=473dc8a0e83946559b942237221207&q=${city}&days=3&aqi=no&alerts=no`
 }
+

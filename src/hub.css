@@ -69,8 +69,13 @@ header {
 
 /* icon */
 .btn-search {
-  width: 6vh;
-  height: 6vh;
+  display: flex;
+  width: 4vh;
+  height: 4vh;
+}
+
+.principal-search-btn {
+  margin-top: 1vh;
 }
 
 .btn-search:hover {
@@ -79,29 +84,46 @@ header {
 
 /* input */
 .search {
+  display: flex;
   margin: auto;
   margin-left: 0;
   margin-top: 0;
-  width: 35vh;
+  /* width: 35vh; */
   height: auto;
-  font-family: "sf-pro-thin", sans-serif;
-  font-size: 3vh;
-  font-weight: 100;
-  letter-spacing: 0.5px;
-  color: white;
-  padding: 1.5vh;
   background: transparent;
-  outline: none;
   border-width: 0.5vh;
   border-radius: 30px;
+  padding: 1vh;
   opacity: 0.9;
   border: solid white;
 }
 
-.search::placeholder {
+.input-search {
+  padding: 1.5vh;
+  font-family: "sf-pro-thin", sans-serif;
+  font-size: 2.5vh;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  outline: none;
+  color: white;
+  opacity: 0.9;
+  background: transparent;
+  border: none;
+}
+
+.input-search::placeholder {
   font-family: "sf-pro", sans-serif;
   color: white;
   opacity: 0.6;
+}
+
+.btn-input {
+  margin: auto;
+  background: none;
+  width: 3.5vh;
+  height: 3.5vh;
+  border: none;
+  opacity: 0.9;
 }
 
 .date-time {
@@ -116,14 +138,51 @@ header {
   font-size: 2.5vh;
 }
 
-@media (max-width: 600px) {
-  .header {
-    margin: 4vh 4vh 4vh 4vh;
+@media (max-width: 950px) {
+  header {
+    margin: 4vh 5vh 4vh 5vh;
   }
 
   .search {
+    padding: 0.7vh;
+  }
+
+  .input-search {
+    font-size: 2.5vh;
+    width: 22vh;
+  }
+
+  .btn-input {
+    width: 3vh;
+    height: 3vh;
+  }
+
+  .time {
+    font-size: 4vh;
+  }
+
+  .date {
+    font-size: 2.2vh;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    margin: 4vh 2.5vh 4vh 2.5vh;
+  }
+
+  .search {
+    padding: 0.7vh;
+  }
+
+  .input-search {
     font-size: 2vh;
     width: 17vh;
+  }
+
+.btn-input {
+    width: 2vh;
+    height: 2vh;
   }
 
   .time {

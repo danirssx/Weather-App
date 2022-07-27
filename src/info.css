@@ -94,6 +94,12 @@
   border: none;
 }
 
+@media (max-width: 950px) {
+  .measures {
+    margin-left: 3vh;
+  }
+}
+
 @media (max-width: 600px) {
   .measures {
     margin-left: 2vh;
