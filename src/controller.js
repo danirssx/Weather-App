@@ -1,10 +1,10 @@
 // Rendering all functions
 
+import * as model from './model.js'
 import * as data from './data.js'
-import searchView from './Views/searchView.js';
 import SearchView from './Views/searchView.js'
 
-const grabData = async function (city) {
+export const grabData = async function (city) {
     try {
         // current weather
         data.currentFunction(city);
@@ -18,10 +18,8 @@ const grabData = async function (city) {
 
 
 const init = function() {
-    // grabData('caracas')
     SearchView.btnSearch()
-    SearchView.getInput()
-    searchView.test()
+    model.grabInput()
 }
 
 init()

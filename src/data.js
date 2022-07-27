@@ -52,10 +52,14 @@ export const currentFunction = async function (city) {
     // Rendering the data
     const current = await res.json();
 
+    if(!current) return;
+
     state.weather = weatherObject(current);
     state.location = locationObject(current);
 
     if (!res.ok) throw new Error(`${current.message}`);
+
+    console.log(current)
   } catch (err) {
     console.error(err);
   }
@@ -66,6 +70,9 @@ export const nextFunction = async function (city) {
     // Getting the next 2 days
     const res = await fetch(`${API_NEXT(city)}`);
     const future = await res.json();
+
+    if(!future) return;
+
 
     state.next1 = nextObject(future, 1)
     state.next2 = nextObject(future, 2)
