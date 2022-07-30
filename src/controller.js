@@ -3,6 +3,7 @@
 import * as model from './model.js'
 import * as data from './data.js'
 import SearchView from './Views/searchView.js'
+import { TIME } from './config.js'
 
 export const grabData = async function (city) {
     try {
@@ -23,3 +24,5 @@ const init = function() {
 }
 
 init()
+
+console.log(TIME)

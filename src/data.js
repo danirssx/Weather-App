@@ -27,6 +27,7 @@ const locationObject = function (data) {
   const location = data.location;
   return {
     country: location.country,
+    time: location.localtime,
     lat: location.lat,
     lon: location.lon,
     city: location.name,
@@ -59,7 +60,8 @@ export const currentFunction = async function (city) {
 
     if (!res.ok) throw new Error(`${current.message}`);
 
-    console.log(current)
+    console.log(state.weather)
+    console.log(state.location)
   } catch (err) {
     console.error(err);
   }
