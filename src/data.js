@@ -1,5 +1,7 @@
 import { API_CURRENT, API_NEXT } from "./config";
 
+import TimeView from "./Views/timeView.js";
+
 // TEST Api
 
 export const state = {
@@ -45,6 +47,8 @@ const nextObject = function (data, day) {
 
 // Rendering data
 
+let fetchArr = [];
+
 export const currentFunction = async function (city) {
   try {
     // current weather
@@ -52,6 +56,8 @@ export const currentFunction = async function (city) {
 
     // Rendering the data
     const current = await res.json();
+
+    // fetchArr.reverse(fetchArr.push(current))
 
     if (!current) return;
 
@@ -65,7 +71,9 @@ export const currentFunction = async function (city) {
     const [year, month, day] = date.split("-")
     const [hour, minutes] = time.split(":")
 
-    console.log(hour)
+    // console.log(hour)
+
+    TimeView.calcDate(hour)
 
     console.log(state.weather);
     console.log(state.location);

@@ -1,3 +1,5 @@
+import TimeView from "./Views/timeView.js";
+
 // Current API
 export const API_CURRENT = function (city) {
   return `http://api.weatherapi.com/v1/current.json?key=473dc8a0e83946559b942237221207&q=${city}&aqi=no`;
@@ -16,18 +18,35 @@ export const HOUR = GLOBALDATE.getHours();
 export const MINUTES =
   Number(GLOBALDATE.getMinutes() < 10 ? "0" : "") + GLOBALDATE.getMinutes();
 
-export function CLOCK(dom) {
-  let currentDate = new Date();
-
-  // let result = new Date(currentDate.getTime() + (1*6*60*60*1000));
-
-  let time = currentDate.toLocaleTimeString("en-US", {
+function data(result) {
+  let time = result.toLocaleTimeString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
     second: "2-digit",
   });
 
-  document.querySelector(".time").textContent = time;
-
-  setTimeout(CLOCK, 1000);
+  return time;
 }
+
+export function CLOCK() {
+  let currentDate = new Date();
+  document.querySelector(".time").textContent = data(currentDate);
+
+  if(TimeView.iflocation) {
+    setTimeout(CLOCK, 1000);
+  }
+}
+
+export function NEWCLOCK(hour) {
+  let currentDate = new Date();
+  let calc = hour;
+
+  let result = new Date(currentDate.getTime() + (1*calc*60*60*1000));
+
+  document.querySelector(".time").textContent = data(result);
+
+  setTimeout(() => {
+    NEWCLOCK(calc)
+  }, 3000);
+}
+

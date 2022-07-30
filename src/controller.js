@@ -26,7 +26,6 @@ const init = function() {
     SearchView.btnSearch()
     model.grabInput()
     TimeView.time()
-    // TimeView.calcDate()
 }
 
 init()
