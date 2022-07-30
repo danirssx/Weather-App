@@ -3,7 +3,11 @@
 import * as model from './model.js'
 import * as data from './data.js'
 import SearchView from './Views/searchView.js'
-import { TIME } from './config.js'
+import TimeView from './Views/timeView.js'
+
+import { HOUR, MINUTES } from './config.js'
+
+console.log(HOUR, MINUTES)
 
 export const grabData = async function (city) {
     try {
@@ -21,8 +25,8 @@ export const grabData = async function (city) {
 const init = function() {
     SearchView.btnSearch()
     model.grabInput()
+    TimeView.time()
+    // TimeView.calcDate()
 }
 
 init()
-
-console.log(TIME)

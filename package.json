@@ -9,6 +9,14 @@
   "keywords": [],
   "author": "Daniel Ross",
   "devDependencies": {
-    "parcel": "^2.6.2"
+    "buffer": "^6.0.3",
+    "parcel": "^2.6.2",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@mapbox/tile-cover": "^3.0.2",
+    "@mapbox/timespace": "^2.0.4",
+    "geo-tz": "^7.0.2"
   }
 }
