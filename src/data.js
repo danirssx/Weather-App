@@ -1,4 +1,4 @@
-import { API_CURRENT, API_NEXT } from "./config";
+import { API_CURRENT, API_NEXT, DAYFUNCTION, DAYNAME } from "./config.js";
 
 import TimeView from "./Views/timeView.js";
 
@@ -71,8 +71,10 @@ export const currentFunction = async function (city) {
     const [year, month, day] = date.split("-")
     const [hour, minutes] = time.split(":")
 
-    // console.log(hour)
+    // For dayName
+    let dayDate = new Date(year, (month - 1), day).getDay();
 
+    TimeView.updateDate(DAYFUNCTION(dayDate), month, day, year)
     TimeView.calcDate(hour)
 
     console.log(state.weather);

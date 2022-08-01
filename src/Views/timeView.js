@@ -10,11 +10,16 @@ class TimeView extends View {
     time() {
         CLOCK(0)
     }
+    
+    updateDate(dayName, month, day, year) {
+        return document.querySelector(".date").textContent = `${dayName} - ${month}/${day}/${year}`
+    }
 
     calcDate(date) {
         // this.iflocation = false;
         let calc = date - HOUR;
         this.stopTimeout()
+        console.log(date, HOUR)
         CLOCK(calc);
     }
 } 

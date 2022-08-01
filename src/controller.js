@@ -5,9 +5,7 @@ import * as data from './data.js'
 import SearchView from './Views/searchView.js'
 import TimeView from './Views/timeView.js'
 
-import { HOUR, MINUTES } from './config.js'
-
-console.log(HOUR, MINUTES)
+import {DAYFUNCTION, DAYNAME, YEAR, MONTH, DAY } from './config.js'
 
 export const grabData = async function (city) {
     try {
@@ -25,6 +23,7 @@ export const grabData = async function (city) {
 const init = function() {
     SearchView.btnSearch()
     model.grabInput()
+    TimeView.updateDate(DAYFUNCTION(DAYNAME), MONTH, DAY, YEAR)
     TimeView.time()
 }
 
