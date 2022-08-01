@@ -18,26 +18,18 @@ export const HOUR = GLOBALDATE.getHours();
 export const MINUTES =
   Number(GLOBALDATE.getMinutes() < 10 ? "0" : "") + GLOBALDATE.getMinutes();
 
+export let TIMER = null;
+
 function data(result) {
   let time = result.toLocaleTimeString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
-    second: "2-digit",
   });
 
   return time;
 }
 
-export function CLOCK() {
-  let currentDate = new Date();
-  document.querySelector(".time").textContent = data(currentDate);
-
-  if(TimeView.iflocation) {
-    setTimeout(CLOCK, 1000);
-  }
-}
-
-export function NEWCLOCK(hour) {
+export function CLOCK(hour) {
   let currentDate = new Date();
   let calc = hour;
 
@@ -45,8 +37,11 @@ export function NEWCLOCK(hour) {
 
   document.querySelector(".time").textContent = data(result);
 
-  setTimeout(() => {
-    NEWCLOCK(calc)
-  }, 3000);
+
+  TIMER = setTimeout(() => {
+    CLOCK(calc)
+  }, 1000);
+
+  return TIMER;
 }
 

@@ -1,17 +1,21 @@
 import View from './View.js'
-import { CLOCK, GLOBALDATE, HOUR, NEWCLOCK } from '../config.js'
+import { CLOCK, HOUR, TIMER } from '../config.js'
 class TimeView extends View {
     _parentEl = document.querySelector(".date-time")
-    iflocation = true;
+
+    stopTimeout() {
+        clearTimeout(TIMER)
+    }
 
     time() {
-        CLOCK()
+        CLOCK(0)
     }
 
     calcDate(date) {
-        this.iflocation = false;
+        // this.iflocation = false;
         let calc = date - HOUR;
-        return NEWCLOCK(calc);
+        this.stopTimeout()
+        CLOCK(calc);
     }
 } 
 
