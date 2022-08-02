@@ -18,7 +18,6 @@ export const YEAR = GLOBALDATE.getFullYear();
 export const MONTH = GLOBALDATE.getMonth() + 1;
 export const DAY = GLOBALDATE.getDate();
 export const DAYNAME = GLOBALDATE.getDay();
-console.log(YEAR, MONTH, DAY)
 
 export const HOUR = GLOBALDATE.getHours();
 export const MINUTES =

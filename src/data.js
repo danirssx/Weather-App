@@ -1,6 +1,8 @@
 import { API_CURRENT, API_NEXT, DAYFUNCTION, DAYNAME } from "./config.js";
 
 import TimeView from "./Views/timeView.js";
+import NamesView from './Views/namesView.js'
+
 
 // TEST Api
 
@@ -77,8 +79,7 @@ export const currentFunction = async function (city) {
     TimeView.updateDate(DAYFUNCTION(dayDate), month, day, year)
     TimeView.calcDate(hour)
 
-    console.log(state.weather);
-    console.log(state.location);
+    NamesView.render()
   } catch (err) {
     console.error(err);
   }
