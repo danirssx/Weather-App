@@ -5,8 +5,6 @@ import * as data from './data.js'
 import SearchView from './Views/searchView.js'
 import TimeView from './Views/timeView.js'
 
-import {DAYFUNCTION, DAYNAME, YEAR, MONTH, DAY } from './config.js'
-
 export const grabData = async function (city) {
     try {
         // current weather
@@ -23,7 +21,7 @@ export const grabData = async function (city) {
 const init = function() {
     SearchView.btnSearch()
     model.grabInput()
-    TimeView.updateDate(DAYFUNCTION(DAYNAME), MONTH, DAY, YEAR)
+    TimeView.callDate()
     TimeView.time()
 }
 

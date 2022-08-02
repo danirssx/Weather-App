@@ -25,7 +25,6 @@ export const MINUTES =
   Number(GLOBALDATE.getMinutes() < 10 ? "0" : "") + GLOBALDATE.getMinutes();
 
 export let TIMER = null;
-// export let RESULT;
 
 function data(result) {
   let time = result.toLocaleTimeString("en-US", {
@@ -54,8 +53,6 @@ export function CLOCK(hour) {
   TIMER = setTimeout(() => {
     CLOCK(calc)
   }, 1 * 1000);
-
-  // console.log(result)
 
   return TIMER;
 }
