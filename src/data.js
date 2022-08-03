@@ -58,9 +58,6 @@ export const currentFunction = async function (city) {
 
     // Rendering the data
     const current = await res.json();
-
-    // fetchArr.reverse(fetchArr.push(current))
-
     if (!current) return;
 
     state.weather = weatherObject(current);
@@ -76,10 +73,15 @@ export const currentFunction = async function (city) {
     // For dayName
     let dayDate = new Date(year, (month - 1), day).getDay();
 
+    console.log(month)
+
     TimeView.updateDate(DAYFUNCTION(dayDate), month, day, year)
     TimeView.calcDate(hour)
 
     NamesView.render()
+
+    console.log(state.weather)
+    console.log(state.location)
   } catch (err) {
     console.error(err);
   }

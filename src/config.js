@@ -14,6 +14,8 @@ export const API_NEXT = function (city) {
 
 export const GLOBALDATE = new Date();
 
+export let RESULT;
+
 export const YEAR = GLOBALDATE.getFullYear();
 export const MONTH = GLOBALDATE.getMonth() + 1;
 export const DAY = GLOBALDATE.getDate();
@@ -25,7 +27,7 @@ export const MINUTES =
 
 export let TIMER = null;
 
-function data(result) {
+export function DATA(result) {
   let time = result.toLocaleTimeString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
@@ -35,21 +37,16 @@ function data(result) {
   return time;
 }
 
-export function OLDCLOCK(hour) {
-  let currentDate = new Date();
-
-  document.querySelector(".time").textContent = data(currentDate);
-}
-
 export function CLOCK(hour) {
-  let currentDate = new Date();
+  let currentDate = new Date()
   let calc = hour;
-
-  let result = new Date(currentDate.getTime() + (1*calc*60*60*1000));
-
-  document.querySelector(".time").textContent = data(result);
+  
+  RESULT = new Date(currentDate.getTime() + (1*calc*60*60*1000));
+  
+  TimeView.dateDom()
 
   TIMER = setTimeout(() => {
+    RESULT;
     CLOCK(calc)
   }, 1 * 1000);
 

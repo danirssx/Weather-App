@@ -1,8 +1,8 @@
 import SearchView from "./Views/searchView";
 import * as control from "./controller.js";
+import timeView from "./Views/timeView.js";
 
 export let message;
-let search;
 let log;
 
 export const logInput = function () {

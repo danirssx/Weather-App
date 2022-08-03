@@ -1,7 +1,8 @@
 // Grab Search Bar
 
 import loupe from 'url:../../icon white/loupe.png'
-import View from './View.js'
+import View from './View.js';
+import timeView from './timeView.js';
 
 class SearchView extends View { 
     _parentEl = document.querySelector('.header')
@@ -10,6 +11,9 @@ class SearchView extends View {
     btnSearch() {
         const btn = this._btn;
         btn.addEventListener('click', this.render.bind(this))
+        btn.addEventListener('click', function() {
+          timeView.callDate()
+        })
     }
 
     _generateMarkup() {
