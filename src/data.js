@@ -2,6 +2,7 @@ import { API_CURRENT, API_NEXT, DAYFUNCTION, DAYNAME } from "./config.js";
 
 import TimeView from "./Views/timeView.js";
 import NamesView from './Views/namesView.js'
+import MeasureView from "./Views/measureView.js";
 
 
 // TEST Api
@@ -79,6 +80,10 @@ export const currentFunction = async function (city) {
     TimeView.calcDate(hour)
 
     NamesView.render()
+
+    // MeasureView
+    MeasureView.render()
+
 
     console.log(state.weather)
     console.log(state.location)
