@@ -40,6 +40,7 @@ const init = function () {
 
   // MeasureView
   MeasureView.render()
+  MeasureView.changeActive()
 };
 
 init();
