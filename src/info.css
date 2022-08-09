@@ -6,12 +6,12 @@
   grid-template-rows: 100%;
 }
 
-.next-days-1 {
+.next-days-1, .meteo-days-1 {
   text-align: right;
   margin-right: 3vh;
 }
 
-.next-days-2 {
+.next-days-2, .meteo-days-2 {
   text-align: left;
   margin-left: 3vh;
 }
@@ -24,6 +24,34 @@
   font-size: 2.3vh;
   padding-left: 2vh;
   padding-right: 2vh;
+}
+
+/* METEO */
+
+.meteo-line1 {
+  display: flex;
+  top: 50%;
+  justify-content: end;
+}
+
+.meteo-line2 {
+  display: flex;
+  justify-content: start;
+}
+
+.calc-meteo {
+  padding: 2vh;
+  padding-bottom: 0vh;
+}
+
+.text-meteo {
+  font-size: 2.5vh;
+  padding-left: 1vh;
+  padding-right: 0vh;
+}
+
+.img-meteo {
+  width: 7vh;
 }
 
 /* Footer */
@@ -94,6 +122,10 @@
   border: none;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-width: 950px) {
   .measures {
     margin-left: 3vh;
@@ -103,5 +135,10 @@
 @media (max-width: 600px) {
   .measures {
     margin-left: 2vh;
+  }
+
+  .calc-meteo {
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
   }
 }

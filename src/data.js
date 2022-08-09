@@ -3,6 +3,7 @@ import { API_CURRENT, API_NEXT, DAYFUNCTION, DAYNAME } from "./config.js";
 import TimeView from "./Views/timeView.js";
 import NamesView from './Views/namesView.js'
 import MeasureView from "./Views/measureView.js";
+import ButtonView from "./Views/buttonView.js";
 
 
 // TEST Api
@@ -10,6 +11,7 @@ import MeasureView from "./Views/measureView.js";
 export const state = {
   weather: {},
   location: {},
+  actual: {},
   next1: {},
   next2: {},
 };
@@ -43,6 +45,7 @@ const locationObject = function (data) {
 const nextObject = function (data, day) {
   const next = data.forecast.forecastday[day];
   return {
+    rain: next.day.daily_chance_of_rain,
     icon: next.day.condition.icon,
     text: next.day.condition.text,
   };
@@ -74,19 +77,15 @@ export const currentFunction = async function (city) {
     // For dayName
     let dayDate = new Date(year, (month - 1), day).getDay();
 
-    console.log(month)
-
     TimeView.updateDate(DAYFUNCTION(dayDate), month, day, year)
     TimeView.calcDate(hour)
 
+    // Renders
+    MeasureView.render()
+    ButtonView.render()
     NamesView.render()
-
-    // MeasureView
     MeasureView.render()
 
-
-    console.log(state.weather)
-    console.log(state.location)
   } catch (err) {
     console.error(err);
   }
@@ -100,10 +99,13 @@ export const nextFunction = async function (city) {
 
     if (!future) return;
 
+    state.actual = nextObject(future, 0);
     state.next1 = nextObject(future, 1);
     state.next2 = nextObject(future, 2);
 
     if (!res.ok) throw new Error(`${future.message}`);
+
+    ButtonView.render()
   } catch (err) {
     console.error(err);
   }

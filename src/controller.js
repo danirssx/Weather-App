@@ -5,6 +5,7 @@ import * as data from "./data.js";
 import SearchView from "./Views/searchView.js";
 import TimeView from "./Views/timeView.js";
 import MeasureView from './Views/measureView.js'
+import ButtonView from './Views/buttonView.js'
 
 export const grabData = async function (city) {
   try {
@@ -39,8 +40,10 @@ const init = function () {
   TimeView.time();
 
   // MeasureView
-  MeasureView.render()
   MeasureView.changeActive()
+
+  // buttonView
+  ButtonView.changeModel()
 };
 
 init();

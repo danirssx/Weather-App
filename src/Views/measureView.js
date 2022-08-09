@@ -1,10 +1,10 @@
 import View from "./View.js";
 import { state } from '../data.js'
 
+// icons
 import cloud from 'url:../../icon white/cloudy.png'
 import celsiusIcon from 'url:../../icon white/celsius.png'
 import fahrenheitIcon from 'url:../../icon white/fahrenheit.png'
-
 
 class measureView extends View {
     _parentEl = document.querySelector(".temp-container")
