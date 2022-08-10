@@ -18,8 +18,8 @@ class SearchView extends View {
 
     _generateMarkup() {
         return `
-         <form class="search">
-          <input type="text" placeholder="Search..." class="input-search"/>
+         <form class="search" action="search" id="searchForm">
+          <input type="search" placeholder="Search..." class="input-search"/>
           <button class="btn-input" type="button">
             <img src="${loupe}" alt="" class="btn-search btn-input" />
           </button>

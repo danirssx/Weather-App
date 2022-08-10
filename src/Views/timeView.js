@@ -15,7 +15,6 @@ class TimeView extends View {
         // this.iflocation = false;
         let calc = date - config.HOUR;
         this.stopTimeout()
-        console.log(date, config.HOUR)
         config.CLOCK(calc);
     }
 

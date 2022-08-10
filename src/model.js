@@ -27,10 +27,25 @@ export const grabInput = function () {
         return log;
       });
 
+      document.querySelector("#searchForm")?.addEventListener('submit', function(e) {
+        e.preventDefault()
+        // message = log;
+        // console.log(`marica`)
+        // logInput()
+      })
+
+      window.onkeydown = function(e) {
+        if(e.keyCode === 13) {
+          message = log;
+          logInput()
+        }
+      }
+
     search = document.querySelector(".btn-input");
 
     if (e.target.classList.contains("btn-input")) {
       message = log;
+      console.log(`puto`)
       logInput();
     }
 
