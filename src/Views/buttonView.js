@@ -6,6 +6,10 @@ import cloudIcon from 'url:../../icon white/cloudy.png'
 import humidityIcon from 'url:../../icon white/humidity.png';
 import rainIcon from "url:../../icon white/rain.png";
 
+// Daydate
+import { dayDate } from '../data.js'
+import { DAYFUNCTION } from '../config.js'
+
 class ButtonView extends View {
   _parentEl = document.querySelector(".weather-info");
 
@@ -17,6 +21,10 @@ class ButtonView extends View {
     newest.classList.toggle("hidden");
 
     this.render()
+  }
+
+  dayDateLog() {
+    dayDate()
   }
 
   _generateMarkup() {
@@ -68,11 +76,11 @@ class ButtonView extends View {
     return `
         <div class="days-div-weather next-days-1">
              <img src="${cloudIcon}" alt="f" class="img-next" />
-             <h3 class="text-days">Wed</h3>
+             <h3 class="text-days">${DAYFUNCTION(dayDate + 1)}</h3>
         </div>
         <div class="days-div-weather next-days-2">
              <img src="${cloudIcon}" alt="f" class="img-next" />
-             <h3 class="text-days">Thur</h3>
+             <h3 class="text-days">${DAYFUNCTION(dayDate + 2)}</h3>
       </div>
         `;
   }

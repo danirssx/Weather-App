@@ -5,6 +5,7 @@ import NamesView from './Views/namesView.js'
 import MeasureView from "./Views/measureView.js";
 import ButtonView from "./Views/buttonView.js";
 
+export let dayDate;
 
 // TEST Api
 
@@ -75,10 +76,14 @@ export const currentFunction = async function (city) {
     const [hour, minutes] = time.split(":")
 
     // For dayName
-    let dayDate = new Date(year, (month - 1), day).getDay();
+    dayDate = new Date(year, (month - 1), day).getDay();
 
     TimeView.updateDate(DAYFUNCTION(dayDate), month, day, year)
     TimeView.calcDate(hour)
+
+    // // PRUEBAA
+    // ButtonView.dayDateLog()
+
 
     // Renders
     MeasureView.render()
