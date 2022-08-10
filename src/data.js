@@ -91,6 +91,8 @@ export const currentFunction = async function (city) {
     NamesView.render()
     MeasureView.render()
 
+    console.log(state.location)
+
   } catch (err) {
     console.error(err);
   }

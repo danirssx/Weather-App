@@ -75,11 +75,11 @@ class ButtonView extends View {
   _generateMarkupNext() {
     return `
         <div class="days-div-weather next-days-1">
-             <img src="${cloudIcon}" alt="f" class="img-next" />
+             <img src="${state.next1.icon}" alt="f" class="img-next" />
              <h3 class="text-days">${DAYFUNCTION(dayDate + 1)}</h3>
         </div>
         <div class="days-div-weather next-days-2">
-             <img src="${cloudIcon}" alt="f" class="img-next" />
+             <img src="${state.next2.icon}" alt="f" class="img-next" />
              <h3 class="text-days">${DAYFUNCTION(dayDate + 2)}</h3>
       </div>
         `;

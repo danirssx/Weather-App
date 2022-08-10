@@ -27,7 +27,8 @@
 }
 
 .temp-icon {
-  width: 20vh;
+  padding-top: 2vh;
+  width: 15vh;
   float: right;
 }
 
@@ -53,7 +54,11 @@
 @media (max-width: 600px) {
   .page-content {
     grid-template-columns: 100%;
-    grid-template-rows: 40% 50%;
+    grid-template-rows: 38% 50%;
+  }
+
+  .city {
+    font-size: 6vh;
   }
 
   .text-city {
@@ -61,6 +66,7 @@
   }
 
   .temp-icon {
+    padding-top: 1vh;
     width: 15vh;
   }
 

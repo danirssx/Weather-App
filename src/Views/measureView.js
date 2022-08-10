@@ -48,7 +48,7 @@ class measureView extends View {
         return `
         <div class="icon-div">
         <img
-          src="${cloud}"
+          src="${state.weather.icon}"
           alt="icon"
           class="temp-icon"
         />

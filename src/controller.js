@@ -6,6 +6,7 @@ import SearchView from "./Views/searchView.js";
 import TimeView from "./Views/timeView.js";
 import MeasureView from './Views/measureView.js'
 import ButtonView from './Views/buttonView.js'
+import BgView from './Views/bgView.js'
 
 export const grabData = async function (city) {
   try {
@@ -44,6 +45,10 @@ const init = function () {
 
   // buttonView
   ButtonView.changeModel()
+
+  // Background
+  BgView.clImage()
+  BgView.changeBg()
 };
 
 init();

@@ -17,7 +17,7 @@
 }
 
 .img-next {
-  width: 9vh;
+  width: 10vh;
 }
 
 .text-days {
@@ -51,7 +51,7 @@
 }
 
 .img-meteo {
-  width: 7vh;
+  width: 8vh;
 }
 
 /* Footer */
@@ -90,7 +90,7 @@
 }
 
 .btn-div {
-  margin-top: 6vh;
+  margin-top: 4vh;
   margin-bottom: 2vh;
   text-align: center;
   padding-right: 10%;
@@ -98,14 +98,14 @@
 
 #btn-data {
   font-family: "sf-pro", sans-serif;
-  font-size: 3vh;
+  font-size: 2.2vh;
   font-weight: 800;
   padding: 2vh 4vh 2vh 4vh;
   border-radius: 5vh;
 }
 
 #btn-data:hover {
-  font-size: 3.1vh;
+  font-size: 2.5vh;
   cursor: pointer;
   opacity: 0.8;
 }
@@ -135,6 +135,14 @@
 @media (max-width: 600px) {
   .measures {
     margin-left: 2vh;
+  }
+
+  #btn-data {
+    font-size: 1.8vh;
+  }
+
+  #btn-data:hover {
+    font-size: 2vh;
   }
 
   .calc-meteo {

@@ -43,8 +43,7 @@ h3 {
 
 /* image */
 .container {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../cities/alejandro-alfaro-m-cmo76qKvNaU-unsplash.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -98,6 +97,11 @@ header {
   border: solid white;
 }
 
+/* Delete x button of the form input */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+
 .input-search {
   padding: 1.5vh;
   font-family: "sf-pro-thin", sans-serif;
@@ -131,7 +135,7 @@ header {
 }
 
 .time {
-  font-size: 4.5vh;
+  font-size: 4vh;
 }
 
 .date {
@@ -186,7 +190,7 @@ header {
   }
 
   .time {
-    font-size: 3.5vh;
+    font-size: 2.5vh;
   }
 
   .date {
