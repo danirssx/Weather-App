@@ -8,7 +8,7 @@ export const logInput = function () {
   try {
     if (message === undefined) return;
     control.grabData(`${message}`);
-    control.grabBg(`${message.split(' ').join('-')}`)
+    // control.grabBg(`${message.split(' ').join('-')}`)
   } catch (err) {
     console.error(`💥💥💥, ${err}`);
   }

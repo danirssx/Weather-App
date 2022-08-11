@@ -1,5 +1,6 @@
 import View from "./View.js";
 import { state2 } from "../data2.js";
+import { state } from "../data.js";
 
 import buenos from  "url:../../cities/thom-milkovic-skUTVJi8-jc-unsplash.jpg";
 import seattle from  "url:../../cities/mwangi-gatheca-qlKaN7eqay8-unsplash.jpg";

@@ -55,12 +55,6 @@ const init = function () {
 
   // buttonView
   ButtonView.changeModel()
-
-  // Background
-  BgView.clImage()
-
-  // prooooff
-  grabBg('caracas')
 };
 
 init();

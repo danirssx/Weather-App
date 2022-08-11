@@ -32,7 +32,7 @@ export const getPhoto = async function (search) {
             downloadLocation: results[0].links.download_location,
           }).then(result => {
             state2.download = result.response.url;
-            console.log(state2.download)
+            DownloadView.render()
           });
 
           // bg
@@ -45,7 +45,6 @@ export const getPhoto = async function (search) {
           BgView.changeBg();
 
             // render
-          DownloadView.render()
           BgView.render();
         }
       });

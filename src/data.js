@@ -1,5 +1,7 @@
 import { API_CURRENT, API_NEXT, DAYFUNCTION, DAYNAME } from "./config.js";
 
+import * as control from './controller.js'
+
 import TimeView from "./Views/timeView.js";
 import NamesView from './Views/namesView.js'
 import MeasureView from "./Views/measureView.js";
@@ -81,15 +83,14 @@ export const currentFunction = async function (city) {
     TimeView.updateDate(DAYFUNCTION(dayDate), month, day, year)
     TimeView.calcDate(hour)
 
-    // // PRUEBAA
-    // ButtonView.dayDateLog()
-
-
     // Renders
     MeasureView.render()
     ButtonView.render()
     NamesView.render()
     MeasureView.render()
+
+    // Grab Bg
+    control.grabBg(`${state.location.capital}-${state.location.country}`)
   } catch (err) {
     console.error(err);
   }
