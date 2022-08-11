@@ -90,9 +90,6 @@ export const currentFunction = async function (city) {
     ButtonView.render()
     NamesView.render()
     MeasureView.render()
-
-    console.log(state.location)
-
   } catch (err) {
     console.error(err);
   }

@@ -1,6 +1,5 @@
 import SearchView from "./Views/searchView";
 import * as control from "./controller.js";
-import timeView from "./Views/timeView.js";
 
 export let message;
 let log;
@@ -8,7 +7,8 @@ let log;
 export const logInput = function () {
   try {
     if (message === undefined) return;
-    return control.grabData(`${message}`);
+    control.grabData(`${message}`);
+    control.grabBg(`${message.split(' ').join('-')}`)
   } catch (err) {
     console.error(`💥💥💥, ${err}`);
   }
@@ -29,9 +29,6 @@ export const grabInput = function () {
 
       document.querySelector("#searchForm")?.addEventListener('submit', function(e) {
         e.preventDefault()
-        // message = log;
-        // console.log(`marica`)
-        // logInput()
       })
 
       window.onkeydown = function(e) {
@@ -45,6 +42,7 @@ export const grabInput = function () {
 
     if (e.target.classList.contains("btn-input")) {
       message = log;
+      console.log(message.split(' ').join('-'))
       console.log(`puto`)
       logInput();
     }

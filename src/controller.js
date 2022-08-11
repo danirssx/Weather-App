@@ -1,7 +1,9 @@
 // Rendering all functions
-
 import * as model from "./model.js";
 import * as data from "./data.js";
+import * as data2 from "./data2.js";
+
+// Views
 import SearchView from "./Views/searchView.js";
 import TimeView from "./Views/timeView.js";
 import MeasureView from './Views/measureView.js'
@@ -19,6 +21,14 @@ export const grabData = async function (city) {
     console.error(err);
   }
 };
+
+export const grabBg = async function(e) {
+  try {
+    data2.getPhoto(e)
+  } catch(err) {
+    console.error(err)
+  }
+}
 
 function coordUser() {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -48,7 +58,9 @@ const init = function () {
 
   // Background
   BgView.clImage()
-  BgView.changeBg()
+
+  // prooooff
+  grabBg('caracas')
 };
 
 init();
