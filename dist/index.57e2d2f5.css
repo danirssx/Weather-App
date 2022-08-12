@@ -1,0 +1,282 @@
+.weather-info {
+  grid-template-rows: 100%;
+  grid-template-columns: 50% 50%;
+  display: grid;
+}
+
+.next-days-1, .meteo-days-1 {
+  text-align: right;
+  margin-right: 3vh;
+}
+
+.next-days-2, .meteo-days-2 {
+  text-align: left;
+  margin-left: 3vh;
+}
+
+.img-next {
+  width: 9.7vh;
+}
+
+.text-days {
+  padding-left: 2vh;
+  padding-right: 2vh;
+  font-size: 2.3vh;
+}
+
+.meteo-line1 {
+  justify-content: end;
+  display: flex;
+  top: 50%;
+}
+
+.meteo-line2 {
+  justify-content: start;
+  display: flex;
+}
+
+.calc-meteo {
+  padding: 2vh 2vh 0;
+}
+
+.text-meteo {
+  padding-left: 1vh;
+  padding-right: 0;
+  font-size: 2.5vh;
+}
+
+.img-meteo {
+  width: 8vh;
+}
+
+.footer {
+  grid-template-rows: 100%;
+  grid-template-columns: 10% 80% 10%;
+  display: grid;
+}
+
+.measures {
+  grid-template-rows: 50% 50%;
+  display: grid;
+}
+
+.btn-measures {
+  width: 3vh;
+  height: auto;
+  opacity: .6;
+  margin: auto;
+}
+
+.btn-measures:hover {
+  opacity: .4;
+  cursor: pointer;
+}
+
+.btn-measure-active {
+  width: 5vh;
+  opacity: 1;
+}
+
+.btn-measure-active:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.btn-div {
+  text-align: center;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+}
+
+#btn-data {
+  border-radius: 5vh;
+  padding: 2vh 4vh;
+  font-family: sf-pro, sans-serif;
+  font-size: 2.2vh;
+  font-weight: 800;
+}
+
+#btn-data:hover {
+  cursor: pointer;
+  opacity: .8;
+  font-size: 2.5vh;
+}
+
+.btn-meteorological {
+  color: #fffc;
+  background: none;
+  border: solid #fff;
+}
+
+.btn-few-days {
+  color: #000000a6;
+  background: #fff;
+  border: none;
+}
+
+.user {
+  color: #fff;
+  margin: 2vh 6vh 2vh 2vh;
+}
+
+.user-font {
+  float: right;
+  text-align: right;
+  opacity: .6;
+  font-size: 2vh;
+  font-style: italic;
+}
+
+.user-font a {
+  color: #fff;
+  opacity: 1;
+}
+
+.user-font a:hover {
+  color: bisque;
+}
+
+.download-icon {
+  float: right;
+  width: 3.5vh;
+  opacity: .6;
+  margin: auto;
+}
+
+.download-icon:hover {
+  cursor: pointer;
+  width: 3.8vh;
+  opacity: .8;
+}
+
+.final {
+  grid-template-rows: 100%;
+  grid-template-columns: 10% 80% 10%;
+  margin: auto;
+  display: grid;
+}
+
+.credits {
+  text-align: center;
+  opacity: .4;
+  justify-content: center;
+  font-size: 1.8vh;
+}
+
+.credits a {
+  color: #fff;
+}
+
+.credits a:hover {
+  color: bisque;
+}
+
+.hidden-credit {
+  opacity: 0;
+}
+
+.log-error {
+  padding-left: 5vh;
+  position: absolute;
+}
+
+.error {
+  color: #ffffffa6;
+  opacity: 0;
+  background: #000;
+  border: none;
+  border-radius: 5vh;
+  padding: 2vh 4vh;
+  font-family: sf-pro, sans-serif;
+  font-size: 2.2vh;
+  font-weight: 500;
+}
+
+.error-change {
+  opacity: .7;
+  transition: all 1s;
+}
+
+.error-hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+@keyframes fadeIn-FadeOut {
+  10% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .measures {
+    margin-left: 3vh;
+  }
+
+  .final {
+    grid-template-columns: 20% 60% 20%;
+    display: grid;
+  }
+
+  .error-change {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .measures {
+    margin-left: 2vh;
+  }
+
+  .btn-measures {
+    width: 3.5vh;
+  }
+
+  #btn-data {
+    font-size: 1.8vh;
+  }
+
+  #btn-data:hover {
+    font-size: 2vh;
+  }
+
+  .calc-meteo {
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+  }
+
+  .user-font {
+    font-size: 1.4vh;
+  }
+
+  .credits {
+    font-size: 1.5vh;
+  }
+
+  .final {
+    grid-template-columns: 20% 60% 20%;
+    display: grid;
+  }
+
+  .error-change {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=index.57e2d2f5.css.map */
