@@ -55,6 +55,14 @@ export function CLOCK(hour) {
 
 export function DAYFUNCTION(i) {
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  if(i === 7) {
+    return days[0]
+  }
+
+  if(i === 8) {
+    return days[1]
+  }
+  
   return days[i];
 }
 
