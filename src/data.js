@@ -6,6 +6,7 @@ import TimeView from "./Views/timeView.js";
 import NamesView from './Views/namesView.js'
 import MeasureView from "./Views/measureView.js";
 import ButtonView from "./Views/buttonView.js";
+import ErrorView from "./Views/errorView.js";
 
 export let dayDate;
 
@@ -93,6 +94,7 @@ export const currentFunction = async function (city) {
     control.grabBg(`${state.location.capital}-${state.location.country}`)
   } catch (err) {
     console.error(err);
+    ErrorView.errorDisplay()
   }
 };
 
@@ -112,6 +114,9 @@ export const nextFunction = async function (city) {
 
     ButtonView.render()
   } catch (err) {
-    console.error(err);
+    console.error(`${err}, log another City or Country.`);
+    setTimeout(() => {
+      ErrorView.errorDisplay()
+    }, 5 * 1000);
   }
 };

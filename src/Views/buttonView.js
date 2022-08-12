@@ -47,6 +47,7 @@ class ButtonView extends View {
       "click",
       this._classChange.bind(this, fewDays, meteo)
     );
+
     this._meteoData.addEventListener(
       "click",
       this._classChange.bind(this, meteo, fewDays)
