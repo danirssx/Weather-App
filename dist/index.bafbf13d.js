@@ -808,10 +808,12 @@ parcelHelpers.export(exports, "DAYFUNCTION", ()=>DAYFUNCTION);
 var _timeViewJs = require("./Views/timeView.js");
 var _timeViewJsDefault = parcelHelpers.interopDefault(_timeViewJs);
 const API_CURRENT = function(city) {
-    return `http://api.weatherapi.com/v1/current.json?key=473dc8a0e83946559b942237221207&q=${city}&aqi=no`;
+    return `https://api.weatherapi.com/v1/current.json?key=473dc8a0e83946559b942237221207&q=${city}&aqi=no
+  `;
 };
 const API_NEXT = function(city) {
-    return `http://api.weatherapi.com/v1/forecast.json?key=473dc8a0e83946559b942237221207&q=${city}&days=3&aqi=no&alerts=no`;
+    return `https://api.weatherapi.com/v1/forecast.json?key=473dc8a0e83946559b942237221207&q=${city}&days=3&aqi=no&alerts=no
+  `;
 };
 const GLOBALDATE = new Date();
 let RESULT;
